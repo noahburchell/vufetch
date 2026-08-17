@@ -1,6 +1,7 @@
 /*
 
 !/.gitignore
+!/LICENSE
 !/Makefile
 !/src/
 /src/*
