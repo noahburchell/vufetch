@@ -1,0 +1,9 @@
+/*
+
+!/.gitignore
+!/Makefile
+!/compile_flags.txt
+!/src/
+/src/*
+!/src/*.c
+!/src/*.h
