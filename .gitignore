@@ -7,3 +7,5 @@
 /src/*
 !/src/*.c
 !/src/*.h
+/docs/*
+!/docs/example.png
