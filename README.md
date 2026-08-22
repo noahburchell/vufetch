@@ -1,4 +1,5 @@
-# vufetch - very useful fetch
+# vufetch - very useful fetch 
+CURRENTLY UNFINISHED, SO IT WILL BE UNPOLISHED FOR NOW
 
 ![example](docs/example.png)
 
