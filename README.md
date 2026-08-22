@@ -15,7 +15,7 @@ vufetch
 distro support status:
   - gentoo ✅
   - everything else ❌
-  - yes i copied the readme from cube-cli
+  - i copied the readme from cube-cli
 
 ### if you're on a different distro:
 
