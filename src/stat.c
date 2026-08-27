@@ -27,7 +27,8 @@ static void set_str(char *out, size_t size, const char *s) {
         snprintf(out, size, "%.*s", (int)(size - 1), s);
 }
 
-[[nodiscard]] static int slurp(const char *path, char *buf, size_t size) {
+[[nodiscard]] static
+int slurp(const char *path, char *buf, size_t size) {
         size_t used = 0;
 
         if (size == 0)
@@ -68,7 +69,8 @@ static void chomp(char *s) {
         }
 }
 
-[[nodiscard]] static int read_line_file(const char *path, char *out, size_t size) {
+[[nodiscard]] static
+int read_line_file(const char *path, char *out, size_t size) {
         char buf[512];
 
         if (slurp(path, buf, sizeof buf) <= 0)
@@ -85,7 +87,8 @@ static void chomp(char *s) {
         return 0;
 }
 
-[[nodiscard]] static int read_counter(const char *path, const char *key, unsigned long long *out) {
+[[nodiscard]] static
+int read_counter(const char *path, const char *key, unsigned long long *out) {
         char line[512];
         size_t klen = strlen(key);
         int found = -1;
@@ -186,7 +189,8 @@ fetch_line get_distro_id(void) {
 
 static constexpr size_t BLOCKDIR_MAX = 64;
 
-[[nodiscard]] static int root_block_dir(char *out, size_t size) {
+[[nodiscard]] static
+int root_block_dir(char *out, size_t size) {
         struct stat st = {};
         char line[1024];
         char source[256];
@@ -518,7 +522,8 @@ fetch_line get_bytes_written(void) {
         return (fetch_line){.label = "Written", .info = info};
 }
 
-[[nodiscard]] static bool ends_with(const char *s, const char *suffix) {
+[[nodiscard]] static
+bool ends_with(const char *s, const char *suffix) {
         size_t ls = strlen(s), lsuf = strlen(suffix);
 
         return ls >= lsuf && strcmp(s + ls - lsuf, suffix) == 0;
@@ -531,7 +536,8 @@ static void note_temp(long milli, long *hottest, bool *have_temp) {
         }
 }
 
-[[nodiscard]] static unsigned long hwmon_temps(long *hottest, bool *have_temp) {
+[[nodiscard]] static
+unsigned long hwmon_temps(long *hottest, bool *have_temp) {
         static constexpr char root[] = "/sys/class/hwmon";
         struct dirent *chip;
         unsigned long count = 0;

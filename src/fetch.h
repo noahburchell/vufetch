@@ -10,6 +10,7 @@ typedef struct fetch_line {
         const char *info;
 } fetch_line;
 
-[[nodiscard]] int construct(char *out, size_t size, const fetch_line *lines, size_t count);
+[[nodiscard]]
+int construct(char *out, size_t size, const fetch_line *lines, size_t count);
 
 #endif

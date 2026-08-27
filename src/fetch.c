@@ -15,7 +15,8 @@ static const char logo_ascii[] =
         " \\___)=(___/\n"
 ;
 
-[[nodiscard]] static size_t logo_metrics(size_t *width) {
+[[nodiscard]] static
+size_t logo_metrics(size_t *width) {
         size_t rows = 0, max = 0;
 
         for (const char *p = logo_ascii; *p; ) {
@@ -70,8 +71,10 @@ int construct(char *out, size_t size, const fetch_line *lines, size_t count) {
 
                 if (r < count) {
                         const char *info = lines[r].info ? lines[r].info : "";
-                        int label_pad = label_width -
-                                        (int)strlen(lines[r].label) + 1;
+                        //int label_pad = label_width -
+                        //                (int)strlen(lines[r].label) + 1;
+
+                        int label_pad = 1;
 
                         n = snprintf(out + used, size - used,
                                      "%-*.*s%*s%s:%*s%s\n",
