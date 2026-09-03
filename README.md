@@ -6,8 +6,8 @@ CURRENTLY UNFINISHED, SO IT WILL BE UNPOLISHED FOR NOW
 ### if you're on gentoo:
 ```sh
 emerge --ask app-eselect/eselect-repository
-eselect repository add noahburchell git https://github.com/noahburchell/noahburchell-overlay.git
-emaint sync --repo noahburchell
+eselect repository add nburch git https://github.com/noahburchell/nburch-overlay.git
+emaint sync --repo nburch
 # may be masked
 emerge --ask apps-misc/vufetch
 
